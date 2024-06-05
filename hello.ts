@@ -1,4 +1,4 @@
 console.log("Good Evening!");
 console.log("Good Morning")
-var a=100;
+var a=10;
 console.log("a=",a);
