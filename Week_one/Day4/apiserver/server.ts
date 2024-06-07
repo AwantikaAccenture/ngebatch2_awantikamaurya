@@ -45,12 +45,23 @@ app.get('/courses/byid',(req,res)=>{
     const query = req.query.id;
     res.send('Good evening!-'+query);
 })
-
+//express.json()= mateches the content type on the request as application/json
+app.use(express.json())
 app.post('/loginUser',(req,res)=>{
     console.log("To create a user login",req.body);
     const object =req.body.user;
     //send a response
     res.json({login:object})
+})
+
+app.use(express.json())
+app.post('/createprod',(req,res)=>{
+    console.log("To create a details of product",req.body);
+    const object =req.body.product;
+    
+    //send a response
+    res.json({result:object})
+    
 })
 // listen to a port no.
 const PORT = 3400;
