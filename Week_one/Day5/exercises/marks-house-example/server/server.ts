@@ -21,7 +21,8 @@ const dataFromDb = {
 // GET http://localhost:8080/marks-house
 app.get('/marks-house', (request, response) => {
   console.log('GET /marks-house called')
-    
+  
+  response.send(dataFromDb)
   // EXERCISE
   // Send back the db data
 })
@@ -31,7 +32,8 @@ app.get('/marks-house', (request, response) => {
 // Assume it looks like { petType: 'budgies', count: 3 }
 app.post('/more-pets', (request, response) => {
   console.log('POST /more-pets called with', request.body)
-
+  const greeting = `${request.body.petType}, ${request.body.count}`
+  response.send(greeting)
   // EXERCISE
   // Take the pet type and pet count from the json body and put that into the db data
   // Send back an OK message

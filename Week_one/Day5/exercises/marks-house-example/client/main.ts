@@ -12,6 +12,14 @@ const fetchHandler = () => {
   const serverUrl = 'http://localhost:8080/marks-house'
   console.log('Fetching data from...', serverUrl)
 
+  fetch(serverUrl)
+    .then(response => response.text())
+    .then(data => {
+      const greeting = document.createElement('p')
+      greeting.innerText = `The server said: ${data}`
+      dataHolderDiv!.appendChild(greeting)
+    })
+    .catch(error => console.log('there was an error:', error))
   // EXERCISE
   // Put a fetch() promise chain in here
 }
@@ -25,7 +33,24 @@ const postHandler = () => {
   const petTypeText = (petTypeInput as HTMLInputElement).value
   const petCountText = (petCountInput as HTMLInputElement).value
   const dataToSend =  { petType: petTypeText, count: petCountText }
-
+  fetch(serverUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      data: dataToSend,
+      
+    })
+  })
+    .then(response => {
+      if (response.status >= 400) {
+        throw new Error(`error status: ${response.status}`)
+      }
+      return response.text()
+    })
+    .then(data => dataHolderDiv!.innerText = data)
+    .catch(error => console.log('there was an error:', error))
   // EXERCISE
   // Put a fetch() promise chain in here
   // You need to configure the POST method, application/json content type, and a send a stringified body
