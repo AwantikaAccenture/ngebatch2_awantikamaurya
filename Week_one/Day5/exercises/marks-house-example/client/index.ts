@@ -15,6 +15,7 @@ const fetchHandler = () => {
   fetch(serverUrl)
     .then(response => response.text())
     .then(data => {
+      console.log("check",data)
       const greeting = document.createElement('p')
       greeting.innerText = `The server said: ${data}`
       dataHolderDiv!.appendChild(greeting)
@@ -49,8 +50,9 @@ const postHandler = () => {
       }
       return response.text()
     })
-    .then(data => dataHolderDiv!.innerText = data)
+    .then(data => dataHolderDiv!.innerText = data.toString())
     .catch(error => console.log('there was an error:', error))
+    
   // EXERCISE
   // Put a fetch() promise chain in here
   // You need to configure the POST method, application/json content type, and a send a stringified body

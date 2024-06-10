@@ -28,10 +28,9 @@ app.get('/error', (request, response) => {
 })
 
 // Also used in Fetch session
-app.post('/hello/:person/', (request, response) => {
-  console.log('POST /Person Name=',request.body)
-  const data = `Hello ${request.body.name}`
-  response.send(data)
+app.get('/hello/:person/', (request, response) => {
+  
+  response.send('Good Evening !!'+ request.params.person)
   //Write some code that will return a message that includes the
   //persons name by getting it out of the request params
 })

@@ -31,8 +31,8 @@ app.get('/marks-house', (request, response) => {
 // POST and PUT need data in the request.body
 // Assume it looks like { petType: 'budgies', count: 3 }
 app.post('/more-pets', (request, response) => {
-  console.log('POST /more-pets called with', request.body)
-  const greeting = `${request.body.petType}, ${request.body.count}`
+  console.log('POST /more-pets called with', request.body.data.petType)
+  const greeting = `${request.body.data.petType}, ${request.body.data.count}`
   response.send(greeting)
   // EXERCISE
   // Take the pet type and pet count from the json body and put that into the db data

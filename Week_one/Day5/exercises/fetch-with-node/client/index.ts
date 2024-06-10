@@ -36,34 +36,15 @@ const getErrorMessage = () => {
 
 const getPersonalHelloMessage = () => {
   //Complete the fetch that sends a request for a personal message
-  fetch('http://localhost:8080/hello/Awantika', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      name: 'Awantika Maurya',
-      
-    })
+  fetch('http://localhost:8080/hello/Awantika')
+  .then(response => response.text())
+  .then(data => {
+    const greeting = document.createElement('p')
+    greeting.innerText = `The server said: ${data}`
+    helloDiv!.appendChild(greeting)
   })
-    .then(response => {
-      if (response.status >= 400) {
-        throw new Error(`error status: ${response.status}`)
-      }
-      return response.text()
-    })
-    .then(data => responseDisplay!.innerText = data)
-    .catch(error => console.log('there was an error:', error))
-
-  // fetch('http://localhost:8080/hello/Awantika')
-  //   .then(response => response.text())
-  //   .then(data => {
-  //     const greeting = document.createElement('p')
-  //     greeting.innerText = `The server said: ${data}`
-  //     helloDiv!.appendChild(greeting)
-  //   })
-  //   .catch(error => console.log('there was an error:', error))
-  // fetch('http://localhost:8080/hello/YourName')
+  .catch(error => console.log('there was an error:', error))
+  
 }
 
 const postProfileMessage = () => {
