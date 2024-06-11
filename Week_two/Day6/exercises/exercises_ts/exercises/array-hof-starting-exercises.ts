@@ -39,4 +39,12 @@ Filtering first means that the mapping only deals with items that remain after f
 Mapping first would have turned all of the names to upper case before filtering out the older dogs (so less efficient).
 */
 
+// Filter older dogs first
+const filteredPets = academitePetsWithAges.filter(pet => pet.age <= 10);
+
+// Then map to uppercase names
+const uppercaseNames = filteredPets.map(pet => pet.name.toUpperCase());
+
+console.log(uppercaseNames); // Output the array of uppercase names
+
 // EOF

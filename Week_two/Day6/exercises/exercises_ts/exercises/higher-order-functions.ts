@@ -106,5 +106,6 @@ export function getOldest (developers: Developer[]) {
 // 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'
 // For the list above, it would return false
 export function isGlobalGroup (developers: Developer[]) {
+  
 
 }
