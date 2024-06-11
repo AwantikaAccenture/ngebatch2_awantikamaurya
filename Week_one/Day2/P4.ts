@@ -1,6 +1,6 @@
 type Day = 'MON' | 'TUE' | 'WEDS' | 'THUR' | 'FRI'
 const chooseDeliveryDay = (day: Day) => {
- // sort delivery
+ console.log("Day = ",day);
 }
 chooseDeliveryDay('MON') // OK
 chooseDeliveryDay('FRI') // Not OK
