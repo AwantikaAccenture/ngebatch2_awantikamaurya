@@ -19,6 +19,14 @@ export type Developer = {
   language: string
 }
 
+const developer =  [
+  { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', 
+  age: 34, language: 'Javascript' },
+  { firstName: 'Aisha', lastName: 'X.', country: 'Croatia', continent: 
+  'Europe', age: 35, language: 'Python' },
+  { firstName: 'Madison', lastName: 'U.', country: 'United States', 
+  continent: 'Americas', age: 23, language: 'Python' }
+]
 
 // countFromEurope should return the number of developers who are from Europe.
 // For the list above it would return 1.
@@ -32,13 +40,19 @@ export function countFromEurope (developers: Developer[]) {
 // Greetings should be of the form 'Hi <firstName>, what do you like the most about <language>?'
 // For the list above, it would return ['Hi Sofia, what do you like the most about Javascript?', 'Hi Aisha, what do you like the most about Python?', 'Hi Madison, what do you like the most about Python?']
 export function getGreetings (developers: Developer[]) {
-
+  developers.forEach((developer) => {
+    return (`Hi ${developer.firstName} ,what do you like the most about ${developer.language}`)
+   })
 }
 
 // isJSComing should return true if the array contains at least one developer whose language is Javascript.
 // For the list above it would return true.
 export function isJSComing (developers: Developer[]) {
-
+  const JSUser = developers.filter((D) => D.language === "Javascript") 
+  if(JSUser.length>0)
+  return true
+  else
+  return false;
 }
 
 // getFirstPythonDeveloper should return the first developer in the array whose language is Python
@@ -106,6 +120,8 @@ export function getOldest (developers: Developer[]) {
 // 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'
 // For the list above, it would return false
 export function isGlobalGroup (developers: Developer[]) {
-  
+  let GlobalContinents = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+  let developersContinents = developers.map((d: any) => d.continent);
+  return GlobalContinents.every((el) => developersContinents.includes(el));
 
-}
+}console.log(isGlobalGroup(developer));
