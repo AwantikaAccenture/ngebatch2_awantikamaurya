@@ -4,7 +4,7 @@
 
 // Create a function to use later
 const myLoggerCallback = (data: any) => console.log('I was called back with:', data)
-const myErrorCallback = (data: any) => console.log('I was called back with:', data)
+
 // Toggle this value to pretend the db call has succeeded or failed
 const bakeAPizza = () => false
 
@@ -24,8 +24,7 @@ const orderFoodPromise = () =>
 
 console.log('Start now...')
 // See what happens here when the above call fails (rejects)
-orderFoodPromise().then(myLoggerCallback)
-.catch(myLoggerCallback) 
+orderFoodPromise().then(myLoggerCallback) 
 console.log('...Done')
 
 export {}
