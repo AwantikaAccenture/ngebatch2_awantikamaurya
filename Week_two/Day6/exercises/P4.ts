@@ -63,7 +63,7 @@ type User = {
   
   // Part 1: Refactor queryUser and queryFood to 'reject' when missing the required values
   const queryUser = (personName: string): Promise<User> =>
-    new Promise((resolve) => {
+    new Promise((resolve,reject) => {
       const result = userData.filter((user) => user.name === personName)[ 0 ] || null
       resolve(result)
     })

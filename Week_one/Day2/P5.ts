@@ -17,7 +17,7 @@ type Address = {
   const print2 = (line: string | number) => {
     console.log(line)
   }
-
+  print2(2)
   //
   // Expanded address
 
