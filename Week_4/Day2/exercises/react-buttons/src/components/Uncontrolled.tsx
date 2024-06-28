@@ -7,7 +7,7 @@ export default function Uncontrolled() {
     }
   return (
     <div>
-        <input type='test' ref ={element} onInput={handleClick}></input>
+        <input type='text' ref ={element} onInput={handleClick}></input>
         <p>Name is{element.current?.value}</p>
 
     </div>

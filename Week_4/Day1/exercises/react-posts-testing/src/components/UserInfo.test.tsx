@@ -14,6 +14,9 @@ describe('Display UserInfo', () => {
     render(<UserInfo user={user} />)
 
     //Assert..
+    const name = screen.getByText(/John Doe/);
+     const image = screen.getByRole("img");
+    expect(name).toHaveTextContent("John Doe")
    const username = screen.getByText(`${user.name}`) //HTMLDivElement
    const avatarUrl = screen.getByAltText(`${user.name} avatar`) as HTMLImageElement 
  

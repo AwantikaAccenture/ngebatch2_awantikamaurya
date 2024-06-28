@@ -4,8 +4,10 @@ const App = () => {
   const firstName = 'Fiona'
   const isBirthday = true
 
-  return <Greeting name={firstName} isBirthday={isBirthday}
+  return (<><Greeting name={firstName} isBirthday={isBirthday}
    />
+   <StateDemo/>
+   </>)
 }
 
 export default App

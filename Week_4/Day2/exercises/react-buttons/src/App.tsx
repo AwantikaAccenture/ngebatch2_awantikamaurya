@@ -4,6 +4,9 @@ import ClickerButton from './components/ClickerButton'
 import ColourButton from './components/ColourButton'
 import ControlledComponent from './components/ControlledComponent'
 import Uncontrolled from './components/Uncontrolled'
+import Times from './components/Times'
+import FetchCall from './components/FetchCall'
+import Catalog from './components/Catalog'
 
 const App = () => {
   // Our global state
@@ -31,6 +34,9 @@ const App = () => {
       <ColourButton colour={color} handleClick={handleColorClick}/>
       <ControlledComponent/>
       <Uncontrolled/>
+      <Times/>
+      <FetchCall/>
+     
     </>
   )
 }
