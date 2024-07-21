@@ -1,0 +1,82 @@
+.screen-container {
+    background-color: rgba(0, 0, 0, 0.984); /* Half black background */
+    height: 7vh; /* Full viewport height */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    position: fixed; /* Position fixed to cover entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .backgroung-card {
+    position:absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+       
+       margin: 0 auto;
+       padding: 20px;
+       box-sizing: border-box;
+       background-image: url('./../assets/venue.jpg');
+       
+       border-radius: 10px;
+       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
+     }
+
+.venue-card-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+     /* Distribute items evenly with space around them */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the card list */
+    margin-top: 50px;
+     /* Background color for the card list */
+}
+
+.venue-card {
+    background-color: #6dd5ed; /* Default background color for the entire card */
+    color: #333; /* Default text color */
+    border-radius: 10px;
+    padding: 20px;
+    
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.venue-name {
+    background-color: #e4452d; /* Background color for the venue name */
+    color: #fff; /* Text color for the venue name */
+    font-weight: bold;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    padding: 10px; /* Padding around the venue name */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.venue-details {
+    text-align:left;
+    padding-left: 20px; /* Left padding for details to align with the venue name */
+}
+
+.venue-details p {
+    margin-bottom: 5px;
+}
+
+.venue-details button {
+    background-color: #e4452d; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.venue-details button:hover {
+    background-color: #2193b0; /* Button background color on hover */
+}

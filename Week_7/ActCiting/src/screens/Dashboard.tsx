@@ -15,12 +15,18 @@ const Dashboard: React.FC = () => {
 
   const { pathname } = useLocation()
   const navigate = useNavigate()
+  const navigate_myvenue= useNavigate()
 
  
 
   const addVenue = () => {
-    navigate('/addvenue')
+    navigate('/slidercontainer')
   }
+
+  const myVenue = () => {
+    navigate('/myvenue')
+  }
+
   return (
     <div>
         <div className='dashboard-container'>
@@ -57,7 +63,7 @@ const Dashboard: React.FC = () => {
             backgroundColor:'white',
             color:'black',
             marginLeft:20,
-            marginTop:360,}} onClick={addVenue}>My Venue</button>
+            marginTop:360,}} onClick={myVenue}>My Venue</button>
           </div>
       {/* Add Venue Form */}
       {/* {showAddForm && <AddVenueForm onAddVenue={handleAddVenue} />} */}

@@ -36,6 +36,7 @@ const handleOnclick = () => {
 }
 return (
   <>
+  
   <div>
     <div className='screen-container'>
     <h3 style={{color:'white',fontWeight:'normal'}}>ActCiting | Part of GigStr</h3>

@@ -1,0 +1,145 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place behind other content */
+  
+  /* Adjust background properties as needed */
+  background-image: url('./../assets/venue.jpg'); /* Replace with your background image */
+  background-size: cover; /* Cover the entire element */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+}
+
+.multi-step-form {
+ position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url('./../assets/venue.jpg');
+    
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
+  }
+  
+  .form-step {
+   
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Optional: Add a white background to each step */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow to each step */
+  }
+  
+  .form-step h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-step label {
+    margin-bottom: 10px;
+  }
+  
+  .form-step input,
+  .form-step select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-step .next-btn,
+  .form-step .prev-btn,
+  .form-step .submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .form-step :hover{
+   
+      filter: drop-shadow(0 0 2em #a1a19eaa);
+    
+  }
+  
+  .form-step .next-btn,
+  .form-step .prev-btn {
+    margin-right: 10px;
+  }
+  
+  .form-step .submit-btn {
+    background-color: #28a745;
+  }
+  
+  .form-step p {
+    margin-bottom: 10px;
+   
+   
+  }
+  /* AnimatedBackground.css */
+
+.animated-background {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.animated-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%; /* Make it wider to cover the whole screen */
+  height: 200%; /* Make it taller to cover the whole screen */
+  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff); /* Example gradient colors */
+  animation: animateBackground 10s linear infinite; /* Adjust animation duration and timing function */
+}
+
+@keyframes animateBackground {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+.points-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.point {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc; /* Default color for points */
+  display: inline-block;
+}
+
+.line {
+  height: 2px;
+  width: 70px;
+  border: none;
+  background-color: #ccc; /* Default color for lines */
+  
+}
+
+
+  

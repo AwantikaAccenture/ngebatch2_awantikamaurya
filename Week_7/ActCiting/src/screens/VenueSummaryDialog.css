@@ -1,0 +1,41 @@
+.venue-summary-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.dialog-content {
+    background-color: #fff; /* Dialog content background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for the dialog */
+}
+
+.venue-summary-dialog h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.venue-summary-dialog p {
+    margin-bottom: 5px;
+}
+
+.venue-summary-dialog button {
+    background-color: #6dd5ed;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.venue-summary-dialog button:hover {
+    background-color: #2193b0;
+}
+
